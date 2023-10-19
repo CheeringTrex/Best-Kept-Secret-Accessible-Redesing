@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --yellowBg: #FED601;
+    --blueBg: #99B3D6;
+    --redTitle: #D33B20;
+    --orangeBg: #D36A46;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.top-banner{
+    background: var(--yellowBg);
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px black solid;
+}
+
+.top-banner > h3{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+.hero-img{
+    background-image: url('https://oor.nl/media/2021/11/2017_Best_Kept_Photo_Ben_Houdijk_LR-5025.jpg');
+    filter: brightness(60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    position: absolute;
+}
+
+
+
+.backward-text{
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+.main-container{
+    padding-left: 2em;
+    padding-top: 3em;
+    height: 84vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+.title{
+    font-size: 9em;
+    line-height: 0.9em;
+    color: #fff;
+}
+
+
+.title-buttons > button{
+    margin-top: 2em;
+    background: var(--yellowBg);
+    font-size: 1.2em;
+    padding: 1.2em 3em;
+    border: none;
+    border-radius: 0.6em;
+    font-weight: bold;
+}
+
+.program-btn{
+    margin-left: 3em;
+}
+
+
+.footer{
+    bottom: 0;
+    left: 0;
+    height: 8vh;
+    border-top: 3px black solid;
+    background: var(--yellowBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer > h4{
+    padding-left: 2em;
+    font-size: 1.4em;
+}
+
+
+.icons{
+    margin-right: 2em;
+}
+
+.icons a i{
+    margin-left: 0.5em;
+}
+
+#menu{
+    display: none;
+}
+
+#menu-btn{
+    display: inline;
+    position: absolute;
+    left: 0;
+    margin-left: 2em;
+    padding: 0.6em;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+#close-btn{
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-left: 2em;
+    padding: 0.6em;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+#menu-btn:hover, #close-btn:hover{
+    text-decoration: underline;
+}
+
+.left-div{
+    width: 50%;
+    float: left;
+    height: 100vh;
+    background:#fff;
+    padding-left: 3em;
+    padding-top: 6em;
+}
+
+.left-div > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.big-text{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.small-text{
+    padding-top: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.left-div ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.left-div ul li a:hover{
+    text-decoration: underline;
+    color: #6394DD;
+}
+
+
+.right-div{
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background: black;
+    border-left: 5px black solid;
+}
+
+.img-hover{
+    background-image: url('https://www.bestkeptsecret.nl/uploads/images/gallery/_2880x1620_crop_center-center_none/46886/20230610-Jokko-Sfeer-2266.webp');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+/* 
+#ticket:hover + .right-div #img-hover{
+    content: url(./img/sponge-real.jpeg);
+}
+
+#ticket:hover{
+    color: red;
+} 
+*/
+
+
+body:has(#ticket:hover, #ticket:focus) .img-hover{
+    background-image: url('https://images.unsplash.com/photo-1578575436955-ef29da568c6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80');
+} 
+
+body:has(#program:hover, #program:focus) .img-hover{
+    background-image: url('https://global-uploads.webflow.com/5fdd23c063b242037654c7b2/6417e53c3c99852ae7199638_63fdc592f94aa03a2349b37a_Best-Kept-Secret-Festival-2023-lineup-poster.webp');
+} 
+
+body:has(#about:hover, #about:focus) .img-hover{
+    background-image: url('https://festivalfans.nl/wp-content/uploads/2016/02/Best-Kept-Secret-map-2023.jpg');
+} 
+
+body:has(#faq:hover, #faq:focus) .img-hover{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/BKS2014_01_-_entrance.jpg');
+} 
+
+body:has(#accomodations:hover, #accomodations:focus) .img-hover{
+    background-image: url('https://stadscampingtilburg.nl/wp-content/uploads/2020/06/Stadscamping_RedHeadDays_WilliamvanderVoort-007-scaled.jpg');
+} 
+
+body:has(#travel:hover, #travel:focus) .img-hover{
+    background-image: url('https://images0.persgroep.net/rcs/hQQfufATQs5OJump4s8OVVRL-hk/diocontent/125076745/_fill/1600/900/?appId=21791a8992982cd8da851550a453bd7f&quality=0.9');
+} 
+
+body:has(#privacy:hover, #privacy:focus) .img-hover{
+    background-image: url('https://www.promotix.com/hs-fs/hubfs/ScanningWristband.jpg?width=1000&height=667&name=ScanningWristband.jpg');
+} 
+
+body:has(#newsletter:hover, #newsletter:focus) .img-hover{
+    background-image: url('https://images.unsplash.com/photo-1485115905815-74a5c9fda2f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2672&q=80');
+} 
+
+body:has(#merchandise:hover, #merchandise:focus) .img-hover{
+    background-image: url('https://bestkeptsecret.merchstore.nl/files/products/BKS.TEE.2023.BLK/BKS.TEE.2023.BLK-1.jpg');
+} 
+
+.blue-top-banner{
+    background: var(--blueBg);
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px black solid;
+}
+
+.blue-top-banner > h3{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.main-ticket-container{
+    padding-left: 3em;
+    padding-top: 2em;
+    height: 84vh;
+    background: var(--blueBg);
+    width: 100vw;
+}
+
+.blue-footer{
+    bottom: 0;
+    left: 0;
+    height: 8vh;
+    border-top: 3px black solid;
+    background: var(--blueBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blue-footer > h4{
+    padding-left: 2em;
+    font-size: 1.4em;
+}
+
+
+.red-title{
+    color: var(--redTitle);
+    font-size: 7em;
+}
+
+.ticket-info{
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 1.2em;
+}
+
+.ticket-shop{
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top: 2.5em;
+}
+
+.main-ticket-container > a{
+    color: var(--redTitle);
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.orange-top-banner{
+    background: var(--orangeBg);
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px white solid;
+}
+
+.orange-top-banner > h3{
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.main-faq-container{
+    padding-left: 3em;
+    padding-top: 2em;
+    height: 84vh;
+    background: var(--orangeBg);
+    width: 100vw;
+    overflow: scroll;
+}
+
+.orange-footer{
+    bottom: 0;
+    left: 0;
+    height: 8vh;
+    border-top: 3px white solid;
+    background: var(--orangeBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.orange-footer > h4{
+    padding-left: 2em;
+    font-size: 1.4em;
+    color: #FFFFFF;
+}
+
+.yellow-title{
+    color: #F9D649;
+    font-size: 7em;
+}
+
+.faq-buttons{
+    z-index: 1;
+}
+
+
+.faq-buttons > button{
+    font-size: 1.2em;
+    background: none;
+    padding: 0.8em 1.5em;
+    border: white solid 3px;
+    border-radius: 2em;
+    color: #FFFFFF;
+    margin-right: 0.8em;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.faq-buttons > button:hover{
+    background: #FFFFFF;
+    color: #000;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+#general{
+    background: #fff;
+    color: #000;
+}
+
+.link-white{
+    color: #fff;
+}
+
+.faq-drops{
+    width: 90%;
+    display: none;
+}
+
+
+#faq-drop-general{
+    display: block;
+}
+
+#faq-drop-payment{
+    display: none;
+}
+
+.faq-question{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+    border-bottom: 2px solid #fff ;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    user-select: none;
+}
+
+.faq-button > #general:after{
+    background: #fff;
+    color: #000;
+}
+
+.faq-question:hover{
+    cursor: pointer;
+}
+
+.faq-question::selection{
+    background: none;
+}
+.faq-answer{
+    padding: 0.4em 1em;
+    color: #FFFFFF;
+    display: none;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.menu-btn-white{
+    color: #fff;
+}
+
+
+/* .main-ticket-content{
+    height: 100%;
+    background: var(--blueBg);
+}
+
+/* .blue-footer{
+
+} */
